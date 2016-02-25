@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/Frame_Main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- LOGOMARCA -->
+    <LinearLayout
+        android:id="@+id/Frame_1"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Image1"
+            android:src="@drawable/logo_caronuber_small"
+            android:scaleType="fitCenter"
+            android:background="#ffffff" />
+    </LinearLayout>
+    <!-- MOTORISTA e PASSAGEIRO -->
+    <LinearLayout
+        android:id="@+id/Frame_2"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Motorista"
+            android:id="@+id/button_motorista"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Passageiro"
+            android:id="@+id/button_passageiro"/>
+
+    </LinearLayout>
+
+    <!-- MAPA -->
+    <LinearLayout
+        android:id="@+id/Frame_2"
+        android:layout_weight="0.75"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Escolha seu destino:"
+            android:id="@+id/text_EscolhaDestino"
+            android:textAlignment="center" />
+
+        <fragment
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="jonasdegrave.caronuber.Carona"
+            />
+
+    </LinearLayout>
+    <!-- VAGAS -->
+    <LinearLayout
+        android:id="@+id/Frame_2"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <SeekBar
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/seekBar"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:indeterminate="false"
+            android:max="3"
+            android:progress="0" />
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Vagas: 2"
+            android:id="@+id/text_EscolhaDestino"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+    <!-- BROADCAST -->
+    <LinearLayout
+        android:id="@+id/Frame_2"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Anunciar Carona"
+            android:id="@+id/button_broadcast"
+            android:layout_centerHorizontal="true" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+<!--
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Broadcast Vagas"
+            android:id="@+id/button"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"></LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Broadcast Vagas"
+            android:id="@+id/button2"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+-->
+    <!--
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="20%dp"
+            android:id="@+id/imageView"
+            android:src="@drawable/logo_caronuber_small"
+            android:scaleType="fitCenter"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingBar"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:numStars="5"
+            android:stepSize="0.5" />
+
+        <SeekBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekBar"
+            android:layout_below="@+id/ratingBar"
+            android:layout_marginTop="40dp"
+            android:layout_alignRight="@+id/ratingBar"
+            android:layout_alignEnd="@+id/ratingBar"
+            android:layout_alignLeft="@+id/ratingBar"
+            android:layout_alignStart="@+id/ratingBar"
+            android:indeterminate="false"
+            android:max="3"
+            android:progress="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Vagas Disponíveis:"
+            android:id="@+id/textView"
+            android:layout_below="@+id/ratingBar"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="2"
+            android:id="@+id/textView2"
+            android:layout_below="@+id/seekBar"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Broadcast Vagas"
+            android:id="@+id/button"
+            android:layout_below="@+id/textView2"
+            android:layout_centerHorizontal="true" />
+
+        <fragment
+            android:layout_width="wrap_content"
+            android:layout_height="200px"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:id="@+id/map"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            tools:layout="@layout/content_carona" />
+    </RelativeLayout>
+    -->
